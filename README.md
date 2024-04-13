@@ -1,38 +1,23 @@
-# Linear Regression - Custom Implementation
-
-This repository contains an implementation of a linear regression algorithm, built from scratch without using any machine learning libraries like scikit-learn. The goal of this project is to get a deep understanding of the logic and mathematics that underlie linear regression.
+# Linear Regression - Custom Implementation in a Jupyter Notebook
+This repository contains a custom implementation of a linear regression algorithm, built from scratch without using any machine learning libraries like scikit-learn. The goal of this project is to gain a deep understanding of the logic and mathematics that underline linear regression through practical implementation.
 
 ## What is Linear Regression?
-
-Linear regression is a fundamental algorithm in machine learning that models the relationship between a scalar response (or dependent variable) and one or more explanatory variables (or independent variables). The case of one explanatory variable is called simple linear regression; for more than one, the process is called multiple linear regression.
+Linear regression is a fundamental algorithm in machine learning that models the relationship between a dependent variable and one or more independent variables. The case of one explanatory variable is called simple linear regression, for more than one, the process is called multiple linear regression.
 
 ### Files
+- Linear_Regression_Notebook.ipynb: This Jupyter Notebook contains the complete workflow for training a linear regression model, including data preparation, model training using both batch and stochastic gradient descent, and visualizations of results and residuals.
+- boston_train.csv: The training dataset used to train the linear regression model.
+- boston_test.csv: The testing dataset used for making predictions and visualizing how the model performs on unseen data.
+### How it Works?
+The Linear_Regression_Notebook.ipynb does the following:
 
-`linear_regression.py`: This is the main Python script where the linear regression algorithm is implemented from scratch.
+- Imports Necessary Libraries: Starts by importing essential Python libraries including pandas for data manipulation and numpy for numerical operations.
+- Prepares Data: Reads in the boston_train.csv file, separates the target variable and features, normalizes the features, and adds a column of ones to account for the bias term in linear regression.
+- Initializes Parameters: The weights for the linear regression model are initialized randomly. The learning rate (alpha) and regularization parameter (beta) are set.
+- Gradient Descent Implementation: It performs batch gradient descent on the entire dataset and stochastic gradient descent, updating weights based on the gradient of the cost function.
+- Comparison and Analysis: Compares the effectiveness of batch vs. stochastic gradient descent methods in terms of convergence speed and prediction accuracy.
+### Running the Notebook
+To run this notebook, you will need an environment capable of executing Jupyter Notebooks with Python installed, along with the pandas and numpy libraries. It is recommended to use Anaconda as it simplifies package management and deployment of the Jupyter environment.
 
-`boston.csv`: This is the training dataset used to train the linear regression model.
-
-`boston_novi.csv`: This is the testing dataset used to validate the model and predict the output.
-
-### How it works?
-
-The `linear_regression.py` script does the following:
-
-1. Imports necessary libraries: It starts by importing the necessary libraries (pandas and numpy), and setting some parameters.
-
-2. Prepares data: The script reads in a CSV file named 'boston.csv', then separates the target variable (y) and the features (X). The features are normalized, and a column of ones is added to the feature set to account for the bias term in the linear regression.
-
-3. Initializes parameters: The weights for the linear regression model are initialized randomly. The learning rate (alpha) and regularization parameter (beta) are set.
-
-4. Gradient Descent: It performs one iteration of batch gradient descent on the entire dataset, updating the weights based on the gradient of the cost function.
-
-5. Stochastic Gradient Descent: It then shuffles the dataset and performs stochastic gradient descent, updating the weights one example at a time.
-
-6. Predicts: Finally, it reads in a new CSV file named 'boston_novi.csv', normalizes it using the same parameters as the training set, and makes predictions based on the final weights learned from the gradient descent.
-
-### Running the Code
-
-To run the code, you will need to have Python installed on your computer along with the pandas and numpy libraries. Once those are installed, you can run the `linear_regression.py` script using any Python IDE or through the command line.
-
-Please note that this implementation is educational and not optimized for large datasets or for use in production.
-
+## Educational Purpose
+This implementation is intended for educational purposes, providing hands-on experience with the fundamentals of linear regression and gradient descent methods. It is not optimized for large datasets or for use in production environments.
