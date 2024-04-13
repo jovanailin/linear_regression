@@ -1,4 +1,4 @@
-# Linear Regression - Custom Implementation in a Jupyter Notebook
+# Linear Regression - Custom Implementation
 This repository contains a custom implementation of a linear regression algorithm, built from scratch without using any machine learning libraries like scikit-learn. The goal of this project is to gain a deep understanding of the logic and mathematics that underline linear regression through practical implementation.
 
 ## What is Linear Regression?
